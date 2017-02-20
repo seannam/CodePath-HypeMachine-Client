@@ -64,7 +64,7 @@ class Posting: NSObject {
                 continue
             }
             //let posting: Posting = Posting(postingDictionary: postDictionary)!
-            postingArray.append(posting)
+            postingArray.append(post)
         }
         
         return postingArray
