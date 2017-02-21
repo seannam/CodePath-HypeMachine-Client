@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09338D8602D9D191BAE99600 /* Pods_HypeMachineMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DCF9C682EF0113D8604566 /* Pods_HypeMachineMusic.framework */; };
 		C739FF441E5B8AA600C9FC20 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C739FF431E5B8AA600C9FC20 /* Posting.swift */; };
 		C739FF461E5BA18000C9FC20 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C739FF451E5BA18000C9FC20 /* PostTableViewCell.swift */; };
 		D59A442E1E5B72A800F570BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A442D1E5B72A800F570BF /* AppDelegate.swift */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E267F610B14E0F3176B12FC /* Pods-HypeMachineMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeMachineMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-HypeMachineMusic/Pods-HypeMachineMusic.release.xcconfig"; sourceTree = "<group>"; };
+		9FCF76781ECAC15BD09BD513 /* Pods-HypeMachineMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeMachineMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HypeMachineMusic/Pods-HypeMachineMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		B4DCF9C682EF0113D8604566 /* Pods_HypeMachineMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HypeMachineMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C739FF431E5B8AA600C9FC20 /* Posting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 		C739FF451E5BA18000C9FC20 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		D59A442A1E5B72A800F570BF /* HypeMachineMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypeMachineMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09338D8602D9D191BAE99600 /* Pods_HypeMachineMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BD05F87011A1C74D80778CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4DCF9C682EF0113D8604566 /* Pods_HypeMachineMusic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D59A44211E5B72A800F570BF = {
 			isa = PBXGroup;
 			children = (
 				D59A442C1E5B72A800F570BF /* HypeMachineMusic */,
 				D59A442B1E5B72A800F570BF /* Products */,
+				D9D56AA160A409967D822479 /* Pods */,
+				0BD05F87011A1C74D80778CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +128,15 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		D9D56AA160A409967D822479 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FCF76781ECAC15BD09BD513 /* Pods-HypeMachineMusic.debug.xcconfig */,
+				5E267F610B14E0F3176B12FC /* Pods-HypeMachineMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D59A443C1E5B72A800F570BF /* Build configuration list for PBXNativeTarget "HypeMachineMusic" */;
 			buildPhases = (
+				04EBCE42798F385DFE79D031 /* [CP] Check Pods Manifest.lock */,
 				D59A44261E5B72A800F570BF /* Sources */,
 				D59A44271E5B72A800F570BF /* Frameworks */,
 				D59A44281E5B72A800F570BF /* Resources */,
+				9AE16D7A8D46DCAD6E19453B /* [CP] Embed Pods Frameworks */,
+				772DC72CCD54C61B995BB5CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,6 +207,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04EBCE42798F385DFE79D031 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		772DC72CCD54C61B995BB5CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HypeMachineMusic/Pods-HypeMachineMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AE16D7A8D46DCAD6E19453B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HypeMachineMusic/Pods-HypeMachineMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D59A44261E5B72A800F570BF /* Sources */ = {
@@ -309,6 +384,7 @@
 		};
 		D59A443D1E5B72A800F570BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FCF76781ECAC15BD09BD513 /* Pods-HypeMachineMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3QT27T2PJ3;
@@ -322,6 +398,7 @@
 		};
 		D59A443E1E5B72A800F570BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E267F610B14E0F3176B12FC /* Pods-HypeMachineMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3QT27T2PJ3;

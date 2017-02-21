@@ -31,11 +31,11 @@ class Posting: NSObject {
             let postCount = postingDictionary["posted_count"] as? Int,
             let postRank = postingDictionary["rank"] as? Int,
             let postTime = postingDictionary["time"] as? Int,
-            let description = postingDictionary["descriptin"] as? String,
-            let postID = postingDictionary["itemId"] as? String,
+            let description = postingDictionary["description"] as? String,
+            let postID = postingDictionary["itemid"] as? String,
             let itunesURLAsString = postingDictionary["itunes_link"] as? String,
             let itunesURL = URL(string: itunesURLAsString),
-            let thumbnailURLAsString = postingDictionary["thumbnail_url_medium"] as? String,
+            let thumbnailURLAsString = postingDictionary["thumb_url_medium"] as? String,
             let thumbnailLURL = URL(string: thumbnailURLAsString) {
             
             self.artistName = artistInDictionary
@@ -50,6 +50,9 @@ class Posting: NSObject {
             self.thumbnailLink = thumbnailLURL
             
         } else {
+            if let title = postingDictionary["title"] as? String {
+                print("Title: \(title)")
+            }
             print("Error iniitializing posting!")
             return nil
         }

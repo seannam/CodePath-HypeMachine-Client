@@ -91,6 +91,9 @@
                             <constraint firstAttribute="bottom" secondItem="FHK-Sn-pPq" secondAttribute="bottom" id="lRV-u9-PZQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="postsTableView" destination="FHK-Sn-pPq" id="Vmc-ZF-ioN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
